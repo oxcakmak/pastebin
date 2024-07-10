@@ -105,6 +105,7 @@ if(isset($_POST['action'])){
                 'email' => $email,
                 'emailKey' => $helper->Generators->generateStrongPassword(29, 30, true, true, true, false),
                 'password' => $hashedPassword,
+                'permissions' => '7,8,9,11',
                 'registeredAddress' => $helper->Gets->getCurrentIpAddress(),
                 'registeredDateTime' => $helper->Times->getCurrentDateTime("m-d-Y H:i")
             );
