@@ -99,7 +99,7 @@ $part['subBar'] = '<header class="navbar-expand-md">
                         </div>
                     </li>
                     -->
-                    '.(isset($member['id']) && $permissions->check($member['permissions'], "ADMIN") ? '<li class="nav-item"><a class="nav-link" href="'.$config['url'].'admin" ><span class="nav-link-title">'.$lang['admin'].'</span></a></li>' : '').'
+                    '.((isset($member['id']) && isset($member['permissions'])) && $permissions->check($member['permissions'], "ADMIN") ? '<li class="nav-item"><a class="nav-link" href="'.$config['url'].'admin" ><span class="nav-link-title">'.$lang['admin'].'</span></a></li>' : '').'
                     <li class="nav-item"><a class="nav-link" href="'.$config['url'].'me" ><span class="nav-link-title">'.$lang['me'].'</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="'.$config['url'].'logout" ><span class="nav-link-title">'.$lang['logout'].'</span></a></li>
                 </ul>
