@@ -115,7 +115,7 @@ $content = '<div class="page-body">
               <dd class="col-7">'.$link['createdBy'].'</dd>
               <dt class="col-5">'.$lang['created_at'].':</dt>
               <dd class="col-7">'.$link['createdDateTime'].'</dd>
-              '.( isset($member['id']) && $permissions->check($member['permissions'], "ADMIN") ? '<dt class="col-5">'.$lang['created_ip_address'].'</dt><dd class="col-7">'.$link['createdAddress'].'</dd><dt class="col-5">'.$lang['modified_by'].'</dt><dd class="col-7">'.$link['modifiedBy'].'</dd><dt class="col-5">'.$lang['modified_ip_address'].'</dt><dd class="col-7">'.$link['modifiedAddress'].'</dd><dt class="col-5">'.$lang['modified_at'].'</dt><dd class="col-7">'.$link['modifiedDateTime'].'</dd>' : '' ).'
+              '.( (isset($member['id']) && isset($member['permissions'])) && $permissions->check($member['permissions'], "ADMIN") ? '<dt class="col-5">'.$lang['created_ip_address'].'</dt><dd class="col-7">'.$link['createdAddress'].'</dd><dt class="col-5">'.$lang['modified_by'].'</dt><dd class="col-7">'.$link['modifiedBy'].'</dd><dt class="col-5">'.$lang['modified_ip_address'].'</dt><dd class="col-7">'.$link['modifiedAddress'].'</dd><dt class="col-5">'.$lang['modified_at'].'</dt><dd class="col-7">'.$link['modifiedDateTime'].'</dd>' : '' ).'
             </dl>
           </div>
         </div>
