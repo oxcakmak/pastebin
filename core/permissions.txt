@@ -1,0 +1,13 @@
+0|ADMIN|Admin|admin
+1|LIST_USERS|List Users|list_users
+2|UPDATE_USER|Update User|update_user
+3|DELETE_USER|Delete User|delete_user
+4|CREATE_USER|Create User|create_user
+5|UPDATE_USER_PERMISSIONS|Update User Permissions|update_user_permissions
+6|LIST_PERMISSIONS|List Permissions|list_permissions
+7|LIST_PASTES|List Pastes|list_pastes
+8|CREATE_PASTE|Create Paste|create_paste
+9|UPDATE_PASTE|Update Paste|update_paste
+10|UPDATE_PASTE_OTHER|Update Paste Other|update_paste_other
+11|DELETE_PASTE|Delete Paste|delete_paste
+12|DELETE_PASTE_OTHER|Delete Paste Other|delete_paste_other
