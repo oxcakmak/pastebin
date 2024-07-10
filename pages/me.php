@@ -10,7 +10,7 @@ $tabLink = "";
 $tabContent = "";
 $tabScript = "";
 
-if($permissions->check($member['permissions'], "ADMIN") || $permissions->check($member['permissions'], "LIST_PASTES")){
+if(isset($member['permissions']) && $permissions->check($member['permissions'], "ADMIN") || $permissions->check($member['permissions'], "LIST_PASTES")){
   $tabLink .= '<a href="#" class="list-group-item list-group-item-action d-flex align-items-center active" data-tab="pastes">'.$lang['pastes'].'</a>';
   $tabContent .= '<div class="tab-pane active p-2" id="pastes">
     <h2 class="mb-2">'.$lang['pastes'].'</h2>

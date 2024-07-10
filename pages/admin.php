@@ -2,7 +2,7 @@
 
 if(empty($_SESSION['session'])){ include('error.php'); exit; }
 
-if(!$permissions->check($member['permissions'], "ADMIN")){ include "error.php"; exit; }
+if(isset($member['permissions']) &&  !$permissions->check($member['permissions'], "ADMIN")){ include "error.php"; exit; }
 
 include 'partial.php';
 
@@ -12,7 +12,7 @@ $tabLink = "";
 $tabContent = "";
 $tabScript = "";
 
-if($permissions->check($member['permissions'], "LIST_USERS")){
+if(isset($member['permissions']) && $permissions->check($member['permissions'], "LIST_USERS")){
 
   $tabLink .= '<a class="list-group-item list-group-item-action active" data-tab="users">'.$lang['users'].'</a>';
   $tabContent .= '<div class="tab-pane active" id="users">
@@ -101,7 +101,7 @@ if($permissions->check($member['permissions'], "LIST_USERS")){
 
   
   </script>';
-  if($permissions->check($member['permissions'], "UPDATE_USER_PERMISSIONS")){
+  if(isset($member['permissions']) && $permissions->check($member['permissions'], "UPDATE_USER_PERMISSIONS")){
 
     $jsonPermissions = [];
   
