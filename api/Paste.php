@@ -105,7 +105,7 @@ if(isset($_POST['action'])){
 
     /* Create */
     if($_POST['action'] == "create"){
-        $title = isset($_POST['title']) && isset($member['id']) ? $helper->Strings->sanitizeOutput($_POST['title']) : "Untitled";
+        $title = isset($member['id']) ? $helper->Strings->sanitizeOutput($_POST['title']) : isset($_POST['title']) ? $helper->Strings->sanitizeOutput($_POST['title']) : "Untitled";
         $content = $_POST['content'];
         $visibility = isset($member['id']) && isset($_POST['visibility']) ? $helper->Strings->sanitizeOutput($_POST['visibility']) : "public";
     
