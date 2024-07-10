@@ -101,7 +101,7 @@ $content = '<div class="page-body">
         <div class="card card-lg">
           <div class="card-body p-2">
             <div class="btn-list justify-content-end mb-2"><button class="btn btn-primary btnCopy" data-clipboard-target=".paste">'.$lang['copy'].'</button></div>
-            <pre><code class="paste">'.$link['content'].'</code></pre>
+            <pre><code class="paste">'.htmlentities($link['content']).'</code></pre>
           </div>
         </div>
       </div>
